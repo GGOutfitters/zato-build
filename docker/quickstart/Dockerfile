@@ -28,6 +28,9 @@ RUN DEBIAN_FRONTEND=noninteractive \
 # Enable additional repository
 RUN add-apt-repository universe
 
+# Start Memcached
+RUN service memcached start
+
 # Add the package signing key
 RUN curl -s https://zato.io/repo/zato-0CBD7F72.pgp.asc | sudo apt-key add -
 
